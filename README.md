@@ -1,4 +1,4 @@
-# Song Recommender
+# Trustpilot Analyzer
 
 This repository is used to scrape review data from Trustpilot and return visualisations of numeric and written feedback.
 
