@@ -41,7 +41,7 @@ def append_stops(string):
 ################################################################
 ## Spacy Model - better performance, but slightly worse results
 ################################################################ 
-
+@st.cache(suppress_st_warning=True)
 def spacy_cleaner(column):
 
     #Clean Data

@@ -31,6 +31,7 @@ def main():
     # Main page #
     ############# 
 
+
     st.set_page_config(page_title='Trustpilot Review Analyzer',  layout='wide', page_icon='chart_with_upwards_trend')  
     st.title("Trustpilot Review Analyzer")
 
