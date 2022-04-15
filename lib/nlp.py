@@ -23,6 +23,21 @@ def clean_up(s):
     return s
 
 
+def append_stops(string):
+    #open list of stopwords
+    file = open("/Users/robertkammerer/Ironhack/Final Project/lib/stopwords.csv", "r")
+    file_lines = file.read()
+    rk_stopwords = file_lines.split("\n")
+
+    #add stopword
+    rk_stopwords.append(string)
+
+    #safe amended list
+    with open('/Users/robertkammerer/Ironhack/Final Project/lib/stopwords.csv', "w") as file:
+        file_lines = "\n".join(rk_stopwords)
+        file.write(file_lines)
+
+
 ################################################################
 ## Spacy Model - better performance, but slightly worse results
 ################################################################ 

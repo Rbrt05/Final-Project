@@ -10,6 +10,38 @@ import pandas as pd
 import numpy as np
 
 
+### Calculate Percentages
+
+def five_stars(df):
+    perc=len(df[df['stars']==5])/len(df['stars'])*100
+    perc_str=str(round(perc,1))+"%"
+    return perc_str
+
+def four_stars(df):
+    perc=len(df[df['stars']==4])/len(df['stars'])*100
+    perc_str=str(round(perc,1))+"%"
+    return perc_str
+
+def three_stars(df):
+    perc=len(df[df['stars']==3])/len(df['stars'])*100
+    perc_str=str(round(perc,1))+"%"
+    return perc_str
+
+def two_stars(df):
+    perc=len(df[df['stars']==2])/len(df['stars'])*100
+    perc_str=str(round(perc,1))+"%"
+    return perc_str
+
+def one_stars(df):
+    perc=len(df[df['stars']==1])/len(df['stars'])*100
+    perc_str=str(round(perc,1))+"%"
+    return perc_str
+
+def csat(df):
+    csat = len(df[df['stars']>=4])/len(df['stars'])*100
+    csat_str = str(round(csat,1))+"%"
+    return csat_str
+
 # Plotting the histogram
 
 def histogram(start, end, unit, df):

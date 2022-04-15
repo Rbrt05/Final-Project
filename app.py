@@ -72,6 +72,27 @@ def main():
 
         final_df = preprocessing(scraped_df)
 
+        col5s, col4s, col3s, col2s, col1s, colcsat = st.columns(6)
+
+        with col5s:
+            st.metric("5 Stars", five_stars(final_df))
+
+        with col4s:
+            st.metric("4 Stars", four_stars(final_df))
+        
+        with col3s:
+            st.metric("3 Stars", three_stars(final_df))
+
+        with col2s:
+            st.metric("2 Stars", two_stars(final_df))
+
+        with col1s:
+            st.metric("1 Stars", one_stars(final_df))
+
+        with colcsat:
+            st.metric("CSAT", csat(final_df))
+
+        st.markdown("""---""")  
 
         # Create Visualisations Menu
         st.subheader('Customer reviews over time')
@@ -134,5 +155,9 @@ def main():
             with colneg:
                 my_wordcloud(corpneg,title = 'Most used words in negative reviews')
 
+        
+        new_stopword = st.text_input('Enter a word that you would like to add to the stoplist')
+        
+        append_stops(new_stopword)
 
 main()
